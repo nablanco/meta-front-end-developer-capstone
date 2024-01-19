@@ -1,0 +1,19 @@
+.header {
+  margin: 15px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1000px) {
+    flex-flow: column nowrap;
+  }
+}
+
+.logoImage {
+  width: 250px;
+  margin-right: 40px;
+
+  @media screen and (max-width: 1000px) {
+    margin: 0;
+  }
+}
