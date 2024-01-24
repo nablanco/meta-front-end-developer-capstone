@@ -9,7 +9,7 @@ const CallToAction = () => {
       <div className='calltoaction-information-container'>
         <h1 className='calltoaction-h1'>Little Lemon</h1>
         <h2 className='calltoaction-h2'>Chicago</h2>
-        <p className='calltoaction-p'>Welcome to Little Lemon Chicago where we make scrumpdidlyicious food! </p>
+        <p className='calltoaction-p'>Welcome to Little Lemon Chicago where we make scrumpdidlyicious food!</p>
         <button className='calltoaction-button'>
           <Link to="/reservations" className='reservation-link'>
             Reserve a Table
