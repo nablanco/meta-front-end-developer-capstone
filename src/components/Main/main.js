@@ -1,8 +1,7 @@
 import './main.css'
 
 import Homepage from './Homepage/homepage';
-import ReservationsContainer from './Reservations/reservationsContainer';
-
+import BookingPage from './Reservations/bookingPage';
 import { Route, Routes } from 'react-router-dom';
 
 const Main = () => {
@@ -10,7 +9,7 @@ const Main = () => {
     <main className="main">
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
-          <Route path="/reservations" element={<ReservationsContainer />}></Route>
+          <Route path="/reservations" element={<BookingPage />}></Route>
         </Routes>
     </main>
   )

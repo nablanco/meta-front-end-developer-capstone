@@ -4,7 +4,7 @@ import teamImage from "../../../icons_assets/Mario and Adrian A.jpg"
 
 const About = () => {
   return (
-    <section className="about">
+    <section className='about' id='about'>
         <div className='about-information-container'>
           <h1 className='about-h1'>Little Lemon</h1>
           <h2 className='about-h2'>Chicago</h2>

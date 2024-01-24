@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: column;
   width: 100%;
-  margin-top: 55px;
+  margin-top: 100px;
 }
 
 .specials-header {
@@ -24,6 +24,9 @@
 }
 
 .specials-header-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 35px;
   background-color: #F4CE14;
   color: #333333;
@@ -31,8 +34,7 @@
   font-weight: 700;
   text-decoration: none;
   width: 175px;
-  height: 46.8px;
-  padding: 13px 15px;
+  height: 46px;
   border: 0;
   border-radius: 5px;
   cursor: pointer;

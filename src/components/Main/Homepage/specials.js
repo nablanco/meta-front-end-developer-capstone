@@ -3,6 +3,7 @@ import greekSaladImage from '../../../icons_assets/greek salad.jpg'
 import bruschettaImage from '../../../icons_assets/bruchetta.svg'
 import lemonDessertImage from '../../../icons_assets/lemon dessert.jpg'
 
+import { HashLink } from 'react-router-hash-link'
 const specialsData = [
   {
     name: 'Greek Salad',
@@ -26,12 +27,12 @@ const specialsData = [
 
 const Specials = () => {
   return (
-    <section className="specials">
+    <section className="specials" id="menu">
       <header className='specials-header'>
         <h1 className='specials-header-h1'>
           This weeks specials!
         </h1>
-        <button className='specials-header-button'>Online Menu</button>
+        <HashLink to='/#menu' className='specials-header-button'>Online Menu</HashLink>
       </header>
       <div className='specials-container'>
         {specialsData.map(special => {
