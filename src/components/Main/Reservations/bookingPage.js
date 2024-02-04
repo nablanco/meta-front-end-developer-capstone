@@ -1,14 +1,12 @@
-import './bookingPage.css'
-import BookingForm from './bookingForm';
+import "./bookingPage.css";
+import BookingForm from "./bookingForm";
 
-
-const BookingPage = () => {
+const BookingPage = (props) => {
   return (
     <section className="booking-page">
-        BookingPage
-        <BookingForm />
+      <BookingForm props={props} />
     </section>
-  )
-}
+  );
+};
 
 export default BookingPage;
