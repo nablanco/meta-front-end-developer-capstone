@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import BookingForm from "./bookingForm";
-import Main from "../main";
 
 const props = {
   firstName: "",
@@ -22,7 +21,7 @@ const props = {
 };
 
 test("renders First Name label", () => {
-  render(<Main />);
+  render(<BookingForm />);
   const labelElement = screen.getByText("First Name");
   expect(labelElement).toBeInTheDocument();
 });

@@ -22,7 +22,11 @@ const Navigation = () => {
           </HashLink>
         </li>
         <li>
-          <HashLink to="/reservations" className="navigation-navlink">
+          <HashLink
+            to="/reservations"
+            className="navigation-navlink"
+            name="navigation-navlink"
+          >
             Reservations
           </HashLink>
         </li>

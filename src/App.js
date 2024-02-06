@@ -1,10 +1,10 @@
-import './App.css';
+import "./App.css";
 
-import Header from './components/Nav/header';
-import Main from './components/Main/main';
-import Footer from './components/Footer/footer';
+import Header from "./components/Nav/header";
+import Main from "./components/Main/main";
+import Footer from "./components/Footer/footer";
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (

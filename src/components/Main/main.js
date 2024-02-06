@@ -1,6 +1,6 @@
 import "./main.css";
 import Homepage from "./Homepage/homepage";
-import BookingPage from "./Reservations/bookingPage";
+import BookingForm from "./Reservations/bookingForm";
 import ConfirmedBooking from "./Reservations/confirmedBooking";
 import fakeAPI from "../../API/fakeAPI";
 
@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router-dom";
 const defaultDate = new Date();
 
 const initialTimes = {
-  availableTimes: ["19:00", "20:00", "21:00", "22:00"],
+  availableTimes: ["15:00", "20:00", "21:00", "22:00"],
   selectedDate: defaultDate.toLocaleDateString("en-CA"),
 };
 
@@ -59,7 +59,7 @@ const Main = () => {
         <Route
           path="/reservations"
           element={
-            <BookingPage
+            <BookingForm
               firstName={firstName}
               setFirstName={setFirstName}
               lastName={lastName}
@@ -76,6 +76,7 @@ const Main = () => {
               setTime={setTime}
               timeListState={timeListState}
               handleTimeDispatch={handleTimeDispatch}
+              submitForm={submitForm}
             />
           }
         />

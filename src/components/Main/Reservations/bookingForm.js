@@ -1,11 +1,22 @@
 import "./bookingForm.css";
 
-import { HashLink } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
 
-const BookingForm = ({ props }) => {
+const BookingForm = (props) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formValidated = props.submitForm();
+    if (!formValidated) {
+      console.error("The submitted form was rejected by the API validation");
+      return;
+    }
+    navigate("/confirmation");
+  };
+
   return (
-    <form className="booking-form-container">
-      {console.log(props)}
+    <form onSubmit={handleSubmit} className="booking-form-container">
       <h1 className="booking-header">
         Please enter your details below to set a reservation:
       </h1>
@@ -21,6 +32,8 @@ const BookingForm = ({ props }) => {
             id="firstName"
             type="text"
             className="detail-input"
+            required
+            minLength="2"
             value={props.firstName}
             onChange={(e) => {
               props.setFirstName(e.target.value);
@@ -34,6 +47,7 @@ const BookingForm = ({ props }) => {
             id="lastName"
             type="text"
             className="detail-input"
+            required
             value={props.lastName}
             onChange={(e) => {
               props.setLastName(e.target.value);
@@ -49,6 +63,7 @@ const BookingForm = ({ props }) => {
             id="email"
             type="email"
             className="detail-input"
+            required
             value={props.email}
             onChange={(e) => {
               props.setEmail(e.target.value);
@@ -62,6 +77,7 @@ const BookingForm = ({ props }) => {
             id="phoneNumber"
             type="tel"
             className="detail-input"
+            required
             value={props.phoneNumber}
             onChange={(e) => {
               props.setPhoneNumber(e.target.value);
@@ -115,9 +131,9 @@ const BookingForm = ({ props }) => {
           })}
         </select>
       </label>
-      <HashLink to="/confirmation" className="submit-button-link">
+      <button type="submit" className="submit-button-link">
         Submit
-      </HashLink>
+      </button>
     </form>
   );
 };
