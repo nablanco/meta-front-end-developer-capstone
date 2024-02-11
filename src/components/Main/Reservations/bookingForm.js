@@ -22,7 +22,7 @@ const BookingForm = (props) => {
       </h1>
       <div id="name-container" className="client-details-container">
         <label
-          htmlFor="firstname"
+          htmlFor="firstName"
           className="detail-label"
           id="first-name-label"
         >
